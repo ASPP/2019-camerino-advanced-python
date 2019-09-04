@@ -1,14 +1,14 @@
-for i in range(9):
-    if i % 3 == 0:
-        continue
+def nondivisible(n,divide_by):
+    for i in range(n):
+        if i % divide_by != 0:
+            yield i
+
+
+for i in nondivisible(9,3):
     print('Square is', i ** 2)
 
-for j in range(5):
-    if j % 2 == 0:
-        continue
-    print('Cube is', j ** 3)
+for i in nondivisible(5,2):
+    print('Cube is', i ** 3)
 
-for k in range(13):
-    if k % 5 == 0:
-        continue
-    print('A' * k)
+for i in nondivisible(13,5):
+    print('A' * i)
